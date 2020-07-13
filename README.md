@@ -13,7 +13,6 @@ positional arguments:
                         encapsulated in double quotes.)
 
 optional arguments:
-  -h, --help            show this help message and exit
   -n N_RESULTS, --n_results N_RESULTS
                         number of links to gather. default = 1000
   --client_secret CLIENT_SECRET
