@@ -35,4 +35,4 @@ e.g
 
 or
 
-`python get_subs.py movie review,GPT-3,true crime documentary`
+`python get_subs.py "movie review,GPT-3,true crime documentary"`

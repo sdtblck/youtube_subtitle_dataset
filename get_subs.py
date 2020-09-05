@@ -23,6 +23,7 @@ def download_subs_mp(queries, out_path="out", save_links=True, scrolldown=1000):
     queries = chunks(queries, (len(queries) // cpu_count() - 1))
     with Pool(cpu_count() - 1) as p:
         p.starmap(download_subs_single, zip(queries, repeat(out_path), repeat(save_links), repeat(scrolldown)))
+    print('Done!')
 
 
 if __name__ == "__main__":
