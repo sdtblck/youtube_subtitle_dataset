@@ -1,6 +1,7 @@
 import csv
 import math
 import re
+import random
 from bs4 import BeautifulSoup as bs
 from requests_html import HTMLSession, MaxRetries
 from tqdm import tqdm
@@ -93,7 +94,9 @@ class Subtitles_downloader():
                 minutes = list(out.values())
                 all_minutes = set(x for l in minutes for x in l)
                 for m in all_minutes:
-                    for l in out.keys():
+                    keys = list(out.keys())
+                    random.shuffle(keys)
+                    for l in keys:
                         try:
                             text_file.write(out[l][m])
                         except:
