@@ -1,8 +1,3 @@
-google-api-python-client
-google-auth-oauthlib
-google-auth-httplib2
-pandas
-tqdm
-youtube_dl
-webvtt-py
-argparse
+bs4
+requests_html
+youtube_transcript_api
