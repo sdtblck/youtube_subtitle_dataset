@@ -7,6 +7,8 @@ The resulting files contain a string of text per language, per minute of subtitl
 as a header. The dataset is designed to improve the multilingual performance of language models trained on it.
 If only a single language is available, the output is just a text version of the subtitles, with no metadata.
 
+TODO: there is a bug where if you're running this for the first time, requests-html will try to install chromium in the multiprocessing thread and will fail. It should work again the second time you run it, I'm working on fixing this bug.
+
 # Setup
 
 `pip install -r requirements.txt`
