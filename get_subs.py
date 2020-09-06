@@ -3,12 +3,7 @@ from multiprocessing import Pool, cpu_count
 from itertools import repeat
 from downloader_class import Subtitles_downloader
 import csv, os
-
-
-def chunks(l, n):
-    n = max(1, n)
-    return (l[i:i + n] for i in range(0, len(l), n))
-
+from utils import chunks
 
 def download_subs_single(queries, out_path="out", save_links=True, scrolldown=1000):
     try:
@@ -16,6 +11,7 @@ def download_subs_single(queries, out_path="out", save_links=True, scrolldown=10
         sub_downloader.search(queries)
         sub_downloader.download_subs()
     except:
+        print('Thread failed!')
         traceback.print_exc()
 
 
@@ -52,6 +48,6 @@ if __name__ == "__main__":
             for row in csv.reader(inputfile):
                 search_terms.append(row)
         # flattens list of list into unique list of items that aren't empty
-        search_terms = list(set([item for sublist in search_terms for item in sublist if item]))
+        search_terms = list(set([item for sublist in search_terms for item in sublist if item]))[:4]
     print('Searching Youtube for: \n {}'.format(search_terms))
     download_subs_mp(search_terms, args.out_path, args.save_links, args.scroll)
