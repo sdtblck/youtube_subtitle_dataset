@@ -52,6 +52,6 @@ if __name__ == "__main__":
             for row in csv.reader(inputfile):
                 search_terms.append(row)
         # flattens list of list into unique list of items that aren't empty
-        search_terms = list(set([item for sublist in search_terms for item in sublist if item]))[:9]
+        search_terms = list(set([item for sublist in search_terms for item in sublist if item]))
     print('Searching Youtube for: \n {}'.format(search_terms))
     download_subs_mp(search_terms, args.out_path, args.save_links, args.scroll)
