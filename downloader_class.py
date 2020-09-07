@@ -36,6 +36,7 @@ class Subtitles_downloader():
                         # check if this search has already been made, if so, skip
                         csv_out_path = 'links/{}_search_results.csv'.format(q)
                         if os.path.isfile(csv_out_path):
+                            #TODO: read video ids from csv & check txt files instead of just assuming each id has been downloaded
                             continue
 
                     search_url = "https://www.youtube.com/results?search_query={}{}".format(q, self.sub_filter_code)
