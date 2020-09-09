@@ -42,3 +42,6 @@ e.g
 or
 
 `python get_subs.py "movie review,GPT-3,true crime documentary"`
+
+## TODO: 
+- [ ] output as [lm dataformat](https://github.com/leogao2/lm_dataformat)
