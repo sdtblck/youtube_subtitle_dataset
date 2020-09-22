@@ -7,6 +7,8 @@ The resulting files contain a string of text per language, per minute of subtitl
 as a header. The dataset is designed to improve the multilingual performance of language models trained on it.
 If only a single language is available, the output is just a text version of the subtitles, with no metadata.
 
+Download a pre-processed dataset scraped using the search terms in `examples.csv` [here](https://eaidata.bmk.sh/data/yt_subs.jsonl.zst)
+
 # Setup
 
 `pip install -r requirements.txt`
