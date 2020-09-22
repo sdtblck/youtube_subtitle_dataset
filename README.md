@@ -9,6 +9,8 @@ If only a single language is available, the output is just a text version of the
 
 Download a pre-processed dataset scraped using the search terms in `examples.csv` [here](https://eaidata.bmk.sh/data/yt_subs.jsonl.zst)
 
+The dataset is a [jsonl](https://github.com/wbolster/jsonlines) file compressed with [zstd](https://github.com/facebook/zstd). You can easily read the files using [lm-dataformat](https://github.com/leogao2/lm_dataformat).
+
 # Setup
 
 `pip install -r requirements.txt`
